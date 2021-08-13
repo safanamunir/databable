@@ -1,0 +1,23 @@
+<h1>Angular Data Table</h1>
+<table class="table table-striped 
+table-bordered 
+table-sm
+row-border
+hover" datatable [dtOptions]="dtOptions">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr *ngFor="let group of data, let i = index">
+         <td>{{i + 1}}</td>
+         <td>{{group.name}}</td>
+         <td>{{group.email}}</td>
+         <td>{{group.website}}</td>
+     </tr>
+  </tbody>
+</table>
